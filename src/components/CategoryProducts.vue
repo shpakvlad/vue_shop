@@ -9,7 +9,7 @@ let categoryList = ref([]);
 let categoryPath;
 
 
-watch(route, (newValue, oldValue) => {
+watch(route, (newValue) => {
 
   console.log(newValue.fullPath);
 
