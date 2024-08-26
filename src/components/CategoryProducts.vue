@@ -6,13 +6,20 @@ import axios from "axios";
 const route = useRoute();
 const categoryProducts = route.params.categoryName;
 let categoryList = ref([]);
+let categoryPath;
 
 
 watch(route, (newValue, oldValue) => {
 
-  console.log(newValue.fullPath)
+  console.log(newValue.fullPath);
 
-    axios.get('https://dummyjson.com/products/category' + newValue.fullPath)
+  if (newValue.fullPath === '/all') {
+     categoryPath = 'https://dummyjson.com/products?limit=0';
+  } else {
+     categoryPath = 'https://dummyjson.com/products/category' + newValue.fullPath;
+  }
+
+    axios.get(categoryPath)
       .then((response) => {
         categoryList.value = response.data
       })

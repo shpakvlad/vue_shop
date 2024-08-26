@@ -14,12 +14,13 @@ onMounted( () => {
         console.log('Has error: ', error.message);
       });
 });
+
 </script>
 
 <template>
   <ul >
     <li>
-      <ListItem link="all" caption="All Products" />
+      <ListItem link="all" caption="All Products"/>
     </li>
     <li v-if="!hasErrorCategoryList" v-for="(category, index) in categoriesList">
       <ListItem :link="category.slug" :caption="category.name" :key="index" />
