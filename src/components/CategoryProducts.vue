@@ -42,7 +42,6 @@ function addToCart(event) {
   event.preventDefault();
   console.log(event.target.id);
 }
-
 </script>
 
 <template>
@@ -55,26 +54,6 @@ function addToCart(event) {
 
         <Product :item="item"></Product>
 
-<!--        <div class="category-list-item">-->
-<!--          <div class="img-container">-->
-<!--            <img :alt="item.name" :src="item.thumbnail">-->
-<!--          </div>-->
-
-<!--          <div class="category-list-content">-->
-<!--            <h3 class="item-title">{{ item.title }}</h3>-->
-
-<!--            <h2 class="item-price">price: {{ item.price }}&euro;</h2>-->
-
-<!--            <p class="item-rate">rating: {{ item.rating }}</p>-->
-
-<!--            <h4 class="item-stock">in stock: {{ item.stock }} pcs.</h4>-->
-
-<!--            <h4 class="item-comments">comments: {{ item.reviews.length }}</h4>-->
-
-<!--            <button :id="item.id" class="add-to-cart" @click="addToCart">Buy</button>-->
-
-<!--          </div>-->
-<!--        </div>-->
       </div>
     </div>
   </div>
