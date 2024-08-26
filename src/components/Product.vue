@@ -3,6 +3,7 @@ const props = defineProps({
   item: Object,
   required: true,
 });
+
 function addToCart(event) {
   event.preventDefault();
   console.log(event.target.id);
@@ -10,24 +11,23 @@ function addToCart(event) {
 </script>
 
 <template>
-
   <div class="category-list-item">
     <div class="img-container">
-      <img :alt="props.name" :src="props.thumbnail">
+      <img :alt="item.name" :src="item.thumbnail">
     </div>
 
     <div class="category-list-content">
-      <h3 class="item-title">{{ props.title }}</h3>
+      <h3 class="item-title">{{ item.title }}</h3>
 
-      <h2 class="item-price">price: {{ props.price }}&euro;</h2>
+      <h2 class="item-price">price: {{ item.price }}&euro;</h2>
 
-      <p class="item-rate">rating: {{ props.rating }}</p>
+      <p class="item-rate">rating: {{ item.rating }}</p>
 
-      <h4 class="item-stock">in stock: {{ props.stock }} pcs.</h4>
+      <h4 class="item-stock">in stock: {{ item.stock }} pcs.</h4>
 
-      <h4 class="item-comments">comments: {{ props.reviews.length }}</h4>
+      <h4 class="item-comments">comments: {{ item.reviews.length }}</h4>
 
-      <button :id="props.id" class="add-to-cart" @click="addToCart">Buy</button>
+      <button :id="item.id" class="add-to-cart" @click="addToCart">Buy</button>
 
     </div>
   </div>

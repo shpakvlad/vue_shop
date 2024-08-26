@@ -2,12 +2,12 @@
 import {useRoute} from "vue-router";
 import {watch, ref, onMounted} from "vue";
 import axios from "axios";
+import Product from "@/components/Product.vue";
 
 const route = useRoute();
 const categoryProducts = route.params.categoryName;
 let categoryList = ref([]);
 let categoryPath;
-
 
 watch(route, (newValue) => {
 
@@ -53,26 +53,28 @@ function addToCart(event) {
       <div v-for="item of categoryList.products" class="category-list" :key="categoryList.products.id">
 
 
-        <div class="category-list-item">
-          <div class="img-container">
-            <img :alt="item.name" :src="item.thumbnail">
-          </div>
+        <Product :item="item"></Product>
 
-          <div class="category-list-content">
-            <h3 class="item-title">{{ item.title }}</h3>
+<!--        <div class="category-list-item">-->
+<!--          <div class="img-container">-->
+<!--            <img :alt="item.name" :src="item.thumbnail">-->
+<!--          </div>-->
 
-            <h2 class="item-price">price: {{ item.price }}&euro;</h2>
+<!--          <div class="category-list-content">-->
+<!--            <h3 class="item-title">{{ item.title }}</h3>-->
 
-            <p class="item-rate">rating: {{ item.rating }}</p>
+<!--            <h2 class="item-price">price: {{ item.price }}&euro;</h2>-->
 
-            <h4 class="item-stock">in stock: {{ item.stock }} pcs.</h4>
+<!--            <p class="item-rate">rating: {{ item.rating }}</p>-->
 
-            <h4 class="item-comments">comments: {{ item.reviews.length }}</h4>
+<!--            <h4 class="item-stock">in stock: {{ item.stock }} pcs.</h4>-->
 
-            <button :id="item.id" class="add-to-cart" @click="addToCart">Buy</button>
+<!--            <h4 class="item-comments">comments: {{ item.reviews.length }}</h4>-->
 
-          </div>
-        </div>
+<!--            <button :id="item.id" class="add-to-cart" @click="addToCart">Buy</button>-->
+
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
   </div>

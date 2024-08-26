@@ -13,8 +13,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/vue-shop/', // замените на имя вашего репозитория
-  build: {
-    outDir: 'dist',
-  }
+  // base: '/vue_shop/', // замените на имя вашего репозитория
+  // build: {
+  //   outDir: 'dist',
+  //   assetsDir: 'assets',
+  // }
 })
