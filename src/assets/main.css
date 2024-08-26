@@ -33,23 +33,5 @@
 /*}*/
 
 ::-webkit-scrollbar {
-  width: 12px; /* Ширина скроллбара */
-}
-
-/* Стиль для ползунка (thumb) */
-::-webkit-scrollbar-thumb {
-  background-color: #4CAF50; /* Цвет ползунка */
-  border-radius: 10px; /* Закругление углов */
-  border: 3px solid #ffffff; /* Обводка вокруг ползунка */
-}
-
-/* Стиль для трека (track) */
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Цвет трека */
-  border-radius: 10px; /* Закругление углов */
-}
-
-/* Если хотите изменить цвет при наведении на ползунок */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #45a049; /* Более тёмный оттенок ползунка при наведении */
+  width: 0; /* Ширина скроллбара */
 }

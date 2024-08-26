@@ -14,7 +14,6 @@ onMounted( () => {
         console.log('Has error: ', error.message);
       });
 });
-
 </script>
 
 <template>
@@ -33,6 +32,7 @@ onMounted( () => {
 
 <style lang="scss" scoped>
 ul {
+  margin-top: 40px;
   padding: 10px;
   list-style: none;
   background-color: var(--color-background-soft);
