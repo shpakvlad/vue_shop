@@ -4,7 +4,9 @@
 
 <template>
   <div>
-    <button class="search-button">Search</button>
+    <router-link to="/search/test">
+      <button class="search-button">Search</button>
+    </router-link>
   </div>
 </template>
 
@@ -18,5 +20,9 @@
   cursor: pointer;
   border-radius: 5px;
   margin-left: 10px;
+}
+
+router-link:hover {
+  color: transparent;
 }
 </style>

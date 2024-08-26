@@ -1,15 +1,15 @@
 <script setup>
 
+
 </script>
 
 <template>
   <div class="header-search-input">
-    <input class="search-input" placeholder="Я ищу ..." type="text">
+    <input class="search-input" placeholder="I'll find ..." type="text">
   </div>
 </template>
 
 <style lang="scss" scoped>
-
 .header-search-input {
   width: 500px;
   display: flex;
@@ -37,5 +37,4 @@
     }
   }
 }
-
 </style>

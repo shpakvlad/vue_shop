@@ -2,9 +2,7 @@
 import HeaderMenu from "@/components/HeaderMenu.vue";
 import HeaderMenuItem from "@/components/HeaderMenuItem.vue";
 import HeaderMenuLogo from "@/components/HeaderMenuLogo.vue";
-import HeaderSearchInput from "@/components/HeaderSearchInput.vue";
 import HeaderSearchPanel from "@/components/HeaderSearchPanel.vue";
-import HeaderSearchPanelButton from "@/components/HeaderSearchPanelButton.vue";
 import CategoryMenu from "@/components/CategoryMenu.vue";
 </script>
 
@@ -16,10 +14,7 @@ import CategoryMenu from "@/components/CategoryMenu.vue";
     <HeaderMenuItem caption="Shop" link="/"/>
     <HeaderMenuItem caption="About" link="/about"/>
 
-    <HeaderSearchPanel>
-      <HeaderSearchInput></HeaderSearchInput>
-      <HeaderSearchPanelButton></HeaderSearchPanelButton>
-    </HeaderSearchPanel>
+    <HeaderSearchPanel></HeaderSearchPanel>
 
     <div class="right">
       <HeaderMenuItem caption="Cart" link="#"/>
