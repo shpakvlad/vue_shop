@@ -10,6 +10,8 @@ function addToCart(event) {
 }
 </script>
 
+<!--todo  попробовать применить на карточке товара именованные слоты-->
+
 <template>
   <div class="category-list-item">
     <div class="img-container">

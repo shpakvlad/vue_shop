@@ -8,7 +8,7 @@ import SearchProduct from "@/components/SearchProduct.vue";
 const routes = [
     {path: '/', component: HomeShopContent, name: 'Home'},
     {path: '/about', component: AboutUs, name: 'About'},
-    {path: '/:categoryName', component: CategoryProducts, name: 'CategoryProduct'},
+    {path: '/category/:categoryName', component: CategoryProducts, name: 'CategoryProduct'},
     {path: '/search/:searchText', component: SearchProduct, name: 'SearchProduct'},
 ];
 

@@ -4,7 +4,9 @@
 </script>
 
 <template>
-      <h1>Hello wrold</h1>
+
+<!--  todo реальзоваить страницу поиска товара-->
+      <h1>Hello wrold {{ $route.params.searchText}}</h1>
 </template>
 
 <style scoped lang="scss">

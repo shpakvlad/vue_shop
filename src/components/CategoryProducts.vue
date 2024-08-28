@@ -13,11 +13,13 @@ watch(route, (newValue) => {
 
   console.log(newValue.fullPath);
 
-  if (newValue.fullPath === '/all') {
+  if (newValue.fullPath === '/category/all') {
      categoryPath = 'https://dummyjson.com/products?limit=0';
   } else {
-     categoryPath = 'https://dummyjson.com/products/category' + newValue.fullPath;
+     categoryPath = 'https://dummyjson.com/products' + newValue.fullPath;
   }
+
+  // todo оптимизировать код для загрузки страниц
 
     axios.get(categoryPath)
       .then((response) => {
@@ -29,6 +31,9 @@ watch(route, (newValue) => {
 });
 
 onMounted(() => {
+
+  console.log(categoryProducts);
+
   axios.get('https://dummyjson.com/products/category/' + categoryProducts)
       .then((response) => {
         categoryList.value = response.data

@@ -1,11 +1,14 @@
 <script setup>
 
+import {ref} from "vue";
+
+const localValue = ref();
 
 </script>
 
 <template>
   <div class="header-search-input">
-    <input class="search-input" placeholder="I'll find ..." type="text">
+    <input v-model="localValue" @input="$emit('input-changed', localValue)" class="search-input" placeholder="I'll find ..." type="text">
   </div>
 </template>
 

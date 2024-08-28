@@ -1,10 +1,16 @@
 <script setup>
+defineProps({
+  value: {
+    type: String,
+    required: true,
+  }
+})
 
 </script>
 
 <template>
   <div>
-    <router-link to="/search/test">
+    <router-link :to="`/search/${value}`">
       <button class="search-button">Search</button>
     </router-link>
   </div>

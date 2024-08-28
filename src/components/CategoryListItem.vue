@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <router-link :to="link">{{ caption }}</router-link>
+    <router-link :to="`/category/${link}`">{{ caption }}</router-link>
   </div>
 </template>
 
