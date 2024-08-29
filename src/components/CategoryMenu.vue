@@ -14,6 +14,8 @@ onMounted( () => {
         console.log('Has error: ', error.message);
       });
 });
+
+console.log(categoriesList.value);
 </script>
 
 <template>
