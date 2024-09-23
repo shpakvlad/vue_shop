@@ -1,5 +1,7 @@
 <script setup>
 
+import axios from "axios";
+
 
 </script>
 
@@ -7,6 +9,11 @@
 
 <!--  todo реальзоваить страницу поиска товара-->
       <h1>Hello wrold {{ $route.params.searchText}}</h1>
+
+
+
+
+
 </template>
 
 <style scoped lang="scss">

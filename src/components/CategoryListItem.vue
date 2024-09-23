@@ -27,4 +27,8 @@ a {
   display: flex;
   border-radius: 5px;
 }
+
+a:focus {
+  background-color: rgba(95, 158, 160, 0.31);
+}
 </style>

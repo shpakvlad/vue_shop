@@ -39,7 +39,6 @@
   --color-img-bg: var(--vt-c-img-light);
 
   --section-gap: 160px;
-
 }
 
 @media (prefers-color-scheme: dark) {

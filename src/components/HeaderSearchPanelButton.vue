@@ -28,7 +28,7 @@ defineProps({
   margin-left: 10px;
 }
 
-router-link:hover {
-  color: transparent;
+a {
+  background-color: transparent;
 }
 </style>
